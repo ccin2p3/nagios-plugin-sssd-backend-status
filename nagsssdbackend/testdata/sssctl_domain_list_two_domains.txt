@@ -1,0 +1,2 @@
+thedomain.cc.in2p3.fr
+theotherdomain.cc.in2p3.fr

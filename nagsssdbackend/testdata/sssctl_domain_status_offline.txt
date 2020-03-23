@@ -1,0 +1,10 @@
+Online status: Offline
+
+Active servers:
+IPA: ccidm02.in2p3.fr
+
+Discovered IPA servers:
+- ccidm02.in2p3.fr
+- ccidm03.in2p3.fr
+- ccidm01.in2p3.fr
+- ccidm04.in2p3.fr
