@@ -23,7 +23,7 @@ package:
   script:
     - mkdir -p usr/lib64/nagios/plugins/
     - install -m 0755 check_sssd_backend_status usr/lib64/nagios/plugins/check_sssd_backend_status
-    - fpm -s dir -t rpm --license "CECILL-B" --no-rpm-autoreqprov -n "nagios-plugin-sssd-backend-status" -v "$(git describe --always --tags HEAD | sed 's/^v//')" --url "${CI_PROJECT_URL}" --description "Nagios plugins that checks sssd backend status" --maintainer "Remi Ferrand <remi.ferrand@cc.in2p3.fr>" ./usr
+    - fpm -s dir -t rpm --license "CECILL-B" --no-rpm-autoreqprov --depends "sssd-tools" -n "nagios-plugin-sssd-backend-status" -v "$(git describe --always --tags HEAD | sed 's/^v//')" --url "${CI_PROJECT_URL}" --description "Nagios plugins that checks sssd backend status" --maintainer "Remi Ferrand <remi.ferrand@cc.in2p3.fr>" ./usr
   dependencies:
     - build
   artifacts:
