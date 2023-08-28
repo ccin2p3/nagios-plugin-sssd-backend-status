@@ -42,3 +42,13 @@ sssd domains are online
 ```
 $ CGO_ENABLED=0 GOFLAGS='-mod=vendor' go build -a -ldflags "-extldflags '-static'" -o check_sssd_backend_status .
 ```
+
+## Configuration
+
+### Requirements
+
+This probe requires access to the `sssd-ifp` API.
+
+As stated in the `sssd-ifp(5)` man page, by default only `root` user has access to this API.
+
+If you want to execute this probe has another user, you **MUST** add your user _UID_ to to `allowed_uids` parameter. See `sssd-ifp(5)` for more informations.
